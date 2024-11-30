@@ -1,0 +1,1 @@
+<img  style="width: 150px;height: 100px;" src="{{ asset('imagenes/logo/logo_large.png') }}" {{ $attributes }}>

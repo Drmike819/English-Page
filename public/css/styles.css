@@ -1,0 +1,218 @@
+body{
+    background-color: rgba(0, 0, 0, 0.936) !important;
+}
+
+.text-auht{
+    color: wheat !important;
+}
+
+/* estilos del logo del nav */
+.img-logo{
+    width: 80px;
+    height: 50px;
+}
+
+nav{
+    background-color: rgb(129, 127, 127) !important;
+    border-bottom: solid 4px #495057;
+}
+
+
+/* estilos del header */
+.texto-header{
+    margin-top: 100px;
+}
+.contenedor-texto-header{
+    margin-top: 50px !important;
+    border-left: solid rgb(255, 255, 255) 3px;
+    color: #818181;
+
+}
+
+.contenedor-texto-header:hover{
+    color: navajowhite;
+}
+
+
+header{
+    margin-top: 5px;
+}
+
+
+/* estilos del login */
+.contenedor-login{
+    background-color: #f2f4f4;
+    border-radius: 10px;
+    width: 500px;
+    height: 350px;;
+    margin: auto;
+    margin-top: 8%;
+    padding: 10px;
+}
+
+
+/* estilos del signup */
+.contenedor-signup{
+    background-color: #f2f4f4;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 6%;
+    width: 500px;
+    padding: 10px;
+}
+
+
+/* estilos del home */
+/* Agrega una perspectiva 3D a los elementos dentro de .flip-card */
+.flip-card {
+    margin-top: 40px;
+    perspective: 1000px;
+}
+
+/* Contenedor interno de la tarjeta */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Al pasar el cursor, la tarjeta gira 180 grados */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Las caras de la tarjeta ocupan el 100% de ancho y alto */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parte frontal de la tarjeta con imagen de fondo */
+.flip-card-front {
+    /* background-color: #00ff4c; */
+    color: black;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    /* Si la imagen no cubre toda la tarjeta, asegúrate de que el tamaño y la posición sean correctos */
+}
+
+/* Parte trasera de la tarjeta */
+.flip-card-back {
+    background-color: #818181;
+    color: black;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Diseño interno de la tarjeta */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-topics{
+    width: 100%; /* Ocupa todo el ancho del div */
+    height: 100%; /* Ocupa todo el alto del div */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* estilos de las card de los topics */
+.flip-card-back {
+    background-color: #818181;
+    color: black;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Diseño interno de la tarjeta */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciar elementos uniformemente */
+    height: 100%; /* Asegurarse de que tome toda la altura disponible */
+}
+
+/* Título y descripción centrados al inicio */
+.card-body h3 {
+    margin-bottom: auto; /* Asegura que el título y el texto estén en la parte superior */
+    text-align: center; /* Centrado horizontal */
+}
+
+.card-body p {
+    margin-top: auto; /* Asegura que el texto se mantenga cerca del título */
+    text-align: center;
+}
+
+/* Botón siempre en la parte inferior */
+.card-body button {
+    align-self: center; /* Centra el botón horizontalmente */
+    margin-top: auto; /* Empuja el botón hacia el final del contenedor */
+}
+
+
+
+
+/* estilos de subtopics */
+
+.contenedor-subtopics{
+    border: solid black 2px;
+    background-color: rgb(215, 215, 215);
+}
+
+.img-subtopics {
+    width: 350px; /* Se adapta al contenedor */
+    max-width: 350px; /* Máximo ancho */
+    height: 400px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+    border-radius: 10px; /* Ejemplo de borde redondeado */
+}
+
+.subtopics-title, .title-subtopics{
+    color:navajowhite !important;
+}
+
+.subtopics-text{
+    color: #818181 !important;
+}
+
+.contenedor-subtopics{
+    background-color: #343a40;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/* estilos del vocabulario */
+.vocabulary:hover{
+    background-color: #1d2241 !important;
+    color: wheat !important;
+}
+
+table{
+    border-radius: 10px;
+}
+
+.contenedor-table{
+    border-radius: 10px;
+}
