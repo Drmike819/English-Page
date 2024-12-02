@@ -43,7 +43,7 @@
                     <button type="submit" class="btn btn-danger"><strong>LogOut</strong></button>
                 </form>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown mt-2">
               <a class="nav-link dropdown-toggle btn vocabulary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Games
               </a>
