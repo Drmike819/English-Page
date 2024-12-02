@@ -48,7 +48,6 @@ Route::post('reset-password', [ResetPasswordController::class, 'reset'])
 
 Route::get('/juego/adivinar', [GameController::class, 'adivinarPalabra'])->name('adivinar.get');
 Route::post('/juego/verificar', [GameController::class, 'verificarRespuesta'])->name('adivinar.post');
-
 Route::get('/resultado', [GameController::class, 'mostrarResultados'])->name('game.resultados');
 
 

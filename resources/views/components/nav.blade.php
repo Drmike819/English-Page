@@ -45,11 +45,11 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle btn vocabulary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Juegos
+                  Games
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="{{ route('adivinar.get') }}">Order the word</a></li>
-                  <li><a class="dropdown-item" href="{{ route('ahorcado.mostrar') }}">Ahorcado</a></li>
+                  <li><a class="dropdown-item" href="{{ route('ahorcado.mostrar') }}">Hangman</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="https://quizizz.com/join?gc=057530"></a></li>
                   <li><a class="dropdown-item" href="https://es.educaplay.com/recursos-educativos/20794487-unscramble_the_design.html">Quizz</a></li>

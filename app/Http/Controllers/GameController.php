@@ -68,10 +68,14 @@ class GameController extends Controller
 
     public function iniciarJuego()
     {
-        // Selecciona una palabra aleatoria de la base de datos
         $vocabulario = Vocabulary::inRandomOrder()->first();
-        $palabraCorrecta = $vocabulario ? $vocabulario->title : 'programacion'; // Palabra por defecto si no hay registros
-        $pista = $vocabulario ? $vocabulario->description : 'Una pista por defecto'; // Pista por defecto
+    
+        if (!$vocabulario) {
+            dd('No se encontraron registros en la base de datos.');
+        }
+    
+        $palabraCorrecta = $vocabulario->title;
+        $pista = $vocabulario->description;
     
         session([
             'palabraCorrecta' => $palabraCorrecta,
@@ -79,12 +83,17 @@ class GameController extends Controller
             'intentos' => $this->intentosMaximos,
             'estadoJuego' => 'en juego',
             'letrasErradas' => [],
-            'letrasCorrectas' => [], // También inicializa las letras correctas
+            'letrasCorrectas' => [],
         ]);
     }
-
+    
+    
     public function mostrarJuego()
     {
+        if (!session('palabraCorrecta')) {
+            $this->iniciarJuego();
+        }
+    
         $palabraCorrecta = session('palabraCorrecta');
         $pista = session('pista');
         $intentos = session('intentos');
@@ -92,7 +101,6 @@ class GameController extends Controller
         $letrasErradas = session('letrasErradas', []);
         $letrasCorrectas = session('letrasCorrectas', []);
     
-        // Mostrar la palabra con las letras adivinadas
         $palabraOculta = array_map(function($letra) use ($letrasCorrectas) {
             return in_array($letra, $letrasCorrectas) ? $letra : '_';
         }, str_split($palabraCorrecta));
@@ -100,7 +108,7 @@ class GameController extends Controller
         return view('games.hangman', compact('palabraOculta', 'intentos', 'estadoJuego', 'palabraCorrecta', 'pista', 'letrasErradas'));
     }
     
-
+    
     public function adivinarPalabraCompleta(Request $request)
     {
         $respuesta = strtolower(trim($request->input('respuesta'))); // Limpia y convierte a minúsculas
@@ -127,23 +135,21 @@ class GameController extends Controller
     
         return redirect()->route('ahorcado.mostrar');
     }
-
+    
     public function reiniciarJuegoAhorcado()
-{
-    // Recupera la palabra y la pista actuales de la sesión
-    $palabraCorrecta = session('palabraCorrecta');
-    $pista = session('pista');
-
-    // Reinicia los valores de la sesión para comenzar el juego desde cero
-    session([
-        'intentos' => $this->intentosMaximos,
-        'estadoJuego' => 'en juego',
-        'letrasErradas' => [],
-        'letrasCorrectas' => [], // Reinicia las letras correctas
-    ]);
-
-    return redirect()->route('ahorcado.mostrar')->with('mensaje', 'El juego ha sido reiniciado.');
-}
+    {
+        // Reinicia los valores de la sesión para comenzar el juego desde cero
+        session([
+            'intentos' => $this->intentosMaximos,
+            'estadoJuego' => 'en juego',
+            'letrasErradas' => [],
+            'letrasCorrectas' => [], // Reinicia las letras correctas
+            'palabraCorrecta' => null, // Borra la palabra actual para seleccionar una nueva
+            'pista' => null, // Borra la pista actual
+        ]);
+    
+        return redirect()->route('ahorcado.mostrar')->with('mensaje', 'El juego ha sido reiniciado.');
+    }
 
     
 }
