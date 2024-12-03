@@ -5,7 +5,7 @@ function actualizarTemporizador() {
     if (tiempoRestante > 0) {
         tiempoRestante--;
         sessionStorage.setItem('tiempoRestante', tiempoRestante); // Guardar el tiempo restante en sessionStorage.
-        temporizadorElemento.textContent = 'Tiempo restante: ' + tiempoRestante + ' segundos';
+        temporizadorElemento.textContent = 'Time remaining: ' + tiempoRestante + ' seconds';
     } else {
         clearInterval(intervalo); // Detener el temporizador.
         // Mostrar el resultado en la misma página.
