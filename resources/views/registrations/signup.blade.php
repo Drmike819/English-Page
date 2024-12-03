@@ -16,19 +16,19 @@
             @csrf
             <div class="mb-3 form-floating">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" required>
-                <label for="name" class="form-label">Nombre</label>
+                <label for="name" class="form-label">Name</label>
             </div>
             <div class="mb-3 form-floating">
                 <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" required>
-                <label for="email" class="form-label">Correo Electrónico</label>
+                <label for="email" class="form-label">Email</label>
             </div>
             <div class="mb-3 form-floating">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Crea una contraseña" required>
-                <label for="password" class="form-label">Contraseña</label>
+                <label for="password" class="form-label">Password</label>
             </div>
             <div class="mb-3 form-floating">
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirma tu contraseña" required>
-                <label for="password_confirmation" class="form-label">Confirmar Contraseña</label>
+                <label for="password_confirmation" class="form-label">Confirm Password</label>
             </div>
             <div class="container-fluid">
                 <div class="row">
