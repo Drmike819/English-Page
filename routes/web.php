@@ -49,6 +49,7 @@ Route::post('reset-password', [ResetPasswordController::class, 'reset'])
 Route::get('/juego/adivinar', [GameController::class, 'adivinarPalabra'])->name('adivinar.get');
 Route::post('/juego/verificar', [GameController::class, 'verificarRespuesta'])->name('adivinar.post');
 Route::get('/resultado', [GameController::class, 'mostrarResultados'])->name('game.resultados');
+Route::get('/reiniciar-game', [GameController::class, 'reiniciarJuego'])->name('reiniciar.game');
 
 
 Route::get('juego', [GameController::class, 'mostrarJuego'])->name('ahorcado.mostrar');

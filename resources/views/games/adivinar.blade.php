@@ -32,6 +32,11 @@
                         <input type="text" name="respuesta" class="form-control form-control-lg" placeholder="Your answer" required>
                     </div>
                     <button type="submit" class="btn btn-success w-100">Send to</button>
+
+                    <form action="{{ route('reiniciar.game') }}" method="GET" class="mt-4">
+                        <button type="submit" class="btn btn-warning">Restart Game</button>
+                    </form>
+                    
                 </form>
             </div>
         </div>
